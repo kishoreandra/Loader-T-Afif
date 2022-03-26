@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.loader-spinner{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.classic-4 {
+  font-family: monospace;
+  font-size: 1rem;
+  clip-path: inset(0 3ch 0 0);
+  animation: c4 2s steps(4) infinite;
+}
+@keyframes c4 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
+}
+
+
+/* spinner */
+.spinner-3 {
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:conic-gradient(#0000 10%,#2D8BC2);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 5px),#000 0);
+    mask:radial-gradient(farthest-side,#0000 calc(100% - 5px),#000 0);
+    animation:s3 2s infinite linear;
+  }
+  @keyframes s3 {to{transform: rotate(1turn)}}
